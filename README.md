@@ -1,1 +1,1 @@
-# Shared schemas used by gnomad-mobile and gnomad-web
+# Shared schemas used by gnomad-ipad and gnomad-web
