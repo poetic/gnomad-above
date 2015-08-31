@@ -21,8 +21,12 @@ var TimeLogsSchema = new SimpleSchema({
   earnings:  { type: Number,  decimal: false },
   paymentStatus: {
     type: String,
-    defaultValue: 'UNPAIED',
-    allowedValues: Meteor.settings.public.PAYMENT_STATUS_ALLOWED_VALUES
+    defaultValue: 'UNPAID',
+    allowedValues: _.get(
+      Meteor,
+      'settings.public.PAYMENT_STATUS_ALLOWED_VALUES',
+      ['UNPAID']
+    )
   },
 })
 
