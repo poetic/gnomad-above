@@ -19,15 +19,6 @@ var TimeLogsSchema = new SimpleSchema({
   },
   // TODO: make this a decimal and make sure it is less then two digit after period
   earnings:  { type: Number,  decimal: false },
-  paymentStatus: {
-    type: String,
-    defaultValue: 'UNPAID',
-    allowedValues: _.get(
-      Meteor,
-      'settings.public.PAYMENT_STATUS_ALLOWED_VALUES',
-      ['UNPAID']
-    )
-  },
 })
 
 TimeLogs = new Mongo.Collection('timeLogs')
