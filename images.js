@@ -5,4 +5,4 @@ Images = new FS.Collection("images", {
     maxSize: oneMB
   },
   stores: [new FS.Store.GridFS("images")]
-});
+})

@@ -18,6 +18,15 @@ var CreatedAtSchema = new SimpleSchema({
   }
 })
 
+var UpdatedAtSchema = new SimpleSchema({
+  updatedAt: {
+    type: Date,
+    autoValue: function() {
+      return new Date()
+    },
+  }
+})
+
 var PointSchema = new SimpleSchema({
   type: {
     type: String,

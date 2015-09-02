@@ -1,5 +1,6 @@
 var CategorySchema = new SimpleSchema({
-  code: { type: String },
+  // code example: movie-trailer
+  code: { type: String,  unique: true },
   name: { type: String },
   backgroundImages: {
     type: [String],

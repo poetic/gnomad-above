@@ -6,7 +6,7 @@ var TimeLogsSchema = new SimpleSchema({
     type: Number,
     label: 'number of rides',
     custom: function () {
-      // must be positive
+      // must be a positive integer
       var isInteger = typeof this.value === 'number' &&
         Math.floor(this.value) === this.value
 
@@ -17,7 +17,6 @@ var TimeLogsSchema = new SimpleSchema({
       }
     },
   },
-  // TODO: make this a decimal and make sure it is less then two digit after period
   earnings:  { type: Number,  decimal: false },
 })
 
